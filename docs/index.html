@@ -2,13 +2,120 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/Caos-pip/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio</title>
-    <script type="module" crossorigin src="/Caos-pip/assets/index-EP5NilXH.js"></script>
-    <link rel="stylesheet" crossorigin href="/Caos-pip/assets/index-Oq6VxP6i.css">
+    <script type="module" crossorigin src="./assets/index-EP5NilXH.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Oq6VxP6i.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div class="layout">
+
+  <aside class="sidebar">
+    <div class="profile">
+      <div class="avatar"></div>
+      <h2>Jack Nelson</h2>
+      <p>Senior Brabo</p>
+    </div>
+
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#skills">Skills</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="social">
+      <span>🌐</span>
+      <span>💼</span>
+      <span>📧</span>
+    </div>
+  </aside>
+
+  <main class="content">
+
+    <section id="sobre" class="section">
+      <h1>Sobre</h1>
+      <p>
+        A Razão para esse papo de senior é puro marketing  man, PURO MARKETING!! RECEBA QUE EU SEI DAS COISAS!
+      </p>
+    </section>
+
+    <section id="experiencia" class="section">
+      <h1>Experiência</h1>
+
+      <div class="timeline">
+        <div class="item">
+          <div class="dot"></div>
+          <div class="info">
+            <h3>Sydney Studios</h3>
+            <span>2022 - Atual</span>
+            <p>Arquitetura de sistemas e desenvolvimento full stack.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="dot"></div>
+          <div class="info">
+            <h3>Google</h3>
+            <span>2020 - 2022</span>
+            <p>Frontend e experiência do usuário.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h1>Skills</h1>
+
+      <div class="skills-grid">
+        <div class="skill">
+          <span>JavaScript</span>
+          <div class="bar"><div style="width:90%"></div></div>
+        </div>
+
+        <div class="skill">
+          <span>CSS</span>
+          <div class="bar"><div style="width:85%"></div></div>
+        </div>
+
+        <div class="skill">
+          <span>Node.js</span>
+          <div class="bar"><div style="width:80%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="section">
+      <h1>Projetos</h1>
+
+      <div class="projects">
+        <div class="project">
+          <h3>BlackOut</h3>
+          <p>Sistema moderno com foco em performance.</p>
+        </div>
+
+        <div class="project">
+          <h3>Neon UI</h3>
+          <p>Interface futurista e responsiva.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section">
+      <h1>Contato</h1>
+
+      <form id="formContato" method="post">
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="mensagem" placeholder="Mensagem"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+</div>
+
   </body>
 </html>

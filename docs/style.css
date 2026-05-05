@@ -63,20 +63,27 @@ body {
   margin-left: 260px;
   padding: 40px;
   width: 100%;
+  border: none !important;
 }
 
 .section {
   margin-bottom: 60px;
-  border: none;
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
 }
 
 .section h1 {
   margin-bottom: 20px;
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
 }
 
 .timeline .item {
   display: flex;
   margin-bottom: 20px;
+  border: none !important;
 }
 
 .dot {
@@ -96,6 +103,7 @@ body {
 .skill span {
   display: block;
   margin-bottom: 5px;
+  border: none !important;
 }
 
 .bar {
@@ -126,7 +134,7 @@ input, textarea {
   padding: 10px;
   margin: 10px 0;
   background: #111;
-  border: 1px solid #222;
+  border: 1px solid #222 !important;
   color: #fff;
 }
 

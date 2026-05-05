@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import './style.css'
+import { FaLinkedin } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 
 function App() {
   const [formData, setFormData] = useState({ nome: '', email: '', mensagem: '' })
@@ -39,12 +42,13 @@ function App() {
         </nav>
 
         <div className="social">
-          <span>🌐</span>
-          <span>💼</span>
-          <span>📧</span>
+          <a href="https://linkedin.com/in/jackson-oliveira" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+          <a href="https://github.com/sooJack" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+          <a href="mailto:pegaojack16@gmail.com"><SiGmail /></a>
         </div>
       </aside>
       <main className="content">
+
         {/* sobre */}
         <section id="sobre" className="section">
           <h1>Sobre</h1>
@@ -54,6 +58,7 @@ function App() {
             Busco constantemente evoluir profissionalmente e contribuir para o crescimento da empresa, propondo melhorias e soluções eficientes.
             Tenho foco em resultados, trabalho em equipe e no desenvolvimento contínuo, sempre alinhado às necessidades do negócio.
           </p>
+
         </section>
         {/* experience */}
         <section id="experiencia" className="section">
@@ -77,6 +82,7 @@ function App() {
               </div>
             </div>
           </div>
+
         </section>
         {/* skills */}
         <section id="skills" className="section">
@@ -95,6 +101,7 @@ function App() {
               <div className="bar"><div style={{ width: '80%' }}></div></div>
             </div>
           </div>
+
         </section>
         {/* projects */}
         <section id="projetos" className="section">
@@ -114,6 +121,7 @@ function App() {
               </p>
             </div>
           </div>
+
         </section>
         {/* contato */}
         <section id="contato" className="section">

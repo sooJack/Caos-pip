@@ -4,13 +4,13 @@ import './Social.css';
 export default function Social() {
   return (
     <div className="social-links">
-      <a href="https://linkedin.com/in/seu-perfil" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+      <a href="https://linkedin.com/in/jackson-oliveira" target="_blank" rel="noopener noreferrer" title="LinkedIn">
         <FaLinkedin />
       </a>
-      <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer" title="GitHub">
+      <a href="https://github.com/jacksonoliveira" target="_blank" rel="noopener noreferrer" title="GitHub">
         <FaGithub />
       </a>
-      <a href="mailto:seu-email@gmail.com" title="Email">
+      <a href="mailto:jackson@email.com" title="Email">
         <FaEnvelope />
       </a>
     </div>

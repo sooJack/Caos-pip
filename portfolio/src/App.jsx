@@ -1,124 +1,138 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import Social from './components/Social'
-import './App.css'
+import './style.css'
+
+import { useState } from 'react'
+import './style.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [formData, setFormData] = useState({ nome: '', email: '', mensagem: '' })
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    setFormData({ ...formData, [name]: value })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    alert('Mensagem enviada com sucesso 🚀')
+    setFormData({ nome: '', email: '', mensagem: '' })
+  }
+
+  const scrollToSection = (id) => {
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div className="layout">
+      <aside className="sidebar">
+        <div className="profile">
+          <div className="avatar">
+            <img src="/avatar.jpg" alt="Jackson Oliveira" />
+          </div>
+          <h2>Jackson Oliveira</h2>
+          <p>Desenvolvedor de Software</p>
         </div>
-        <div>
-          <h1>Get started</h1>
+
+        <nav>
+          <a href="#sobre" onClick={(e) => { e.preventDefault(); scrollToSection('#sobre') }}>Sobre</a>
+          <a href="#experiencia" onClick={(e) => { e.preventDefault(); scrollToSection('#experiencia') }}>Experiência</a>
+          <a href="#skills" onClick={(e) => { e.preventDefault(); scrollToSection('#skills') }}>Skills</a>
+          <a href="#projetos" onClick={(e) => { e.preventDefault(); scrollToSection('#projetos') }}>Projetos</a>
+          <a href="#contato" onClick={(e) => { e.preventDefault(); scrollToSection('#contato') }}>Contato</a>
+        </nav>
+
+        <div className="social">
+          <span>🌐</span>
+          <span>💼</span>
+          <span>📧</span>
+        </div>
+      </aside>
+      <main className="content">
+        {/* sobre */}
+        <section id="sobre" className="section">
+          <h1>Sobre</h1>
           <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+            Sou desenvolvedor de software com perfil proativo e adaptável,
+            com facilidade em aprender rapidamente novas tecnologias.
+            Busco constantemente evoluir profissionalmente e contribuir para o crescimento da empresa, propondo melhorias e soluções eficientes.
+            Tenho foco em resultados, trabalho em equipe e no desenvolvimento contínuo, sempre alinhado às necessidades do negócio.
           </p>
-          <Social />
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+        </section>
+        {/* experience */}
+        <section id="experiencia" className="section">
+          <h1>Experiência</h1>
+          <div className="timeline">
+            <div className="item">
+              <div className="dot"></div>
+              <div className="info">
+                <h3>Sydney Studios</h3>
+                <span>2022 - Atual</span>
+                <p>Arquitetura de sistemas e desenvolvimento full stack.</p>
+              </div>
+            </div>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+            <div className="item">
+              <div className="dot"></div>
+              <div className="info">
+                <h3>Google</h3>
+                <span>2020 - 2022</span>
+                <p>Frontend e experiência do usuário.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* skills */}
+        <section id="skills" className="section">
+          <h1>Skills</h1>
+          <div className="skills-grid">
+            <div className="skill">
+              <span>JavaScript</span>
+              <div className="bar"><div style={{ width: '90%' }}></div></div>
+            </div>
+            <div className="skill">
+              <span>Python</span>
+              <div className="bar"><div style={{ width: '85%' }}></div></div>
+            </div>
+            <div className="skill">
+              <span>CSS</span>
+              <div className="bar"><div style={{ width: '80%' }}></div></div>
+            </div>
+          </div>
+        </section>
+        {/* projects */}
+        <section id="projetos" className="section">
+          <h1>Projetos</h1>
+          <div className="projects">
+            <div className="project">
+              <h3>BlackOut</h3>
+              <p>
+                Sistema moderno e eficiente programado para um site de jogos, com foco em esclarecer as necessidades dos usuários,
+                as funcionalidades e a experiência de varios usuários, para criar um sistema de classificação de jogos que seja fácil de usar.
+              </p>
+            </div>
+            <div className="project">
+              <h3>Projeto RPG</h3>
+              <p>
+                Criação de sites diversos para RPGs, tudo responsivo, aderindo a modernidade e funcionalidades simples, adições constantes e novas.
+              </p>
+            </div>
+          </div>
+        </section>
+        {/* contato */}
+        <section id="contato" className="section">
+          <h1>Contato</h1>
+          <form id="formContato" onSubmit={handleSubmit}>
+            <input type="text" name="nome" placeholder="Nome" value={formData.nome} onChange={handleInputChange} required />
+            <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleInputChange} required />
+            <textarea name="mensagem" placeholder="Mensagem" value={formData.mensagem} onChange={handleInputChange}></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+      </main>
+    </div>
   )
 }
+
+export default App
 
 export default App

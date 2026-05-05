@@ -1,9 +1,6 @@
 import { useState } from 'react'
 import './style.css'
 
-import { useState } from 'react'
-import './style.css'
-
 function App() {
   const [formData, setFormData] = useState({ nome: '', email: '', mensagem: '' })
 
@@ -132,7 +129,5 @@ function App() {
     </div>
   )
 }
-
-export default App
 
 export default App

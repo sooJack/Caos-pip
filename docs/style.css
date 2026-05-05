@@ -67,6 +67,7 @@ body {
 
 .section {
   margin-bottom: 60px;
+  border: none;
 }
 
 .section h1 {

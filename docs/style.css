@@ -7,6 +7,11 @@
   border: none !important;
 }
 
+*:before, *:after {
+  outline: none !important;
+  border: none !important;
+}
+
 body {
   background: #0b0b0b;
   color: #fff;
@@ -161,4 +166,20 @@ button {
   .projects {
     grid-template-columns: 1fr;
   }
+}
+
+/* Remove todas as linhas/outlines do Tailwind CSS */
+html, body, div, section, main, aside, h1, h2, h3, p, span, a, button, input, textarea, form {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Reaplica apenas as bordas necessárias */
+.sidebar {
+  border-right: 1px solid #1a1a1a;
+}
+
+input, textarea {
+  border: 1px solid #222 !important;
 }

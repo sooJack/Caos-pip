@@ -1,68 +1,94 @@
 import { useState } from 'react'
 import './style.css'
-import { FaLinkedin } from "react-icons/fa6";
-import { FaGithub } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa6"
+import { FaGithub } from "react-icons/fa"
+import { SiGmail } from "react-icons/si"
 
 function App() {
-  const [formData, setFormData] = useState({ nome: '', email: '', mensagem: '' })
+  const [formData, setFormData] = useState({
+    nome: '',
+    email: '',
+    mensagem: ''
+  })
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
-    setFormData({ ...formData, [name]: value })
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value
+    }))
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
     alert('Mensagem enviada com sucesso 🚀')
-    setFormData({ nome: '', email: '', mensagem: '' })
+
+    setFormData({
+      nome: '',
+      email: '',
+      mensagem: ''
+    })
   }
 
+  // 🔧 melhor forma de scroll (evita erro se não achar a seção)
   const scrollToSection = (id) => {
-    document.querySelector(id).scrollIntoView({ behavior: 'smooth' })
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   return (
     <div className="layout">
+
+      {/* SIDEBAR */}
       <aside className="sidebar">
         <div className="profile">
           <div className="avatar">
-            <img src="https://avatars.githubusercontent.com/u/272515403?v=4" alt="Jackson Oliveira" />
+            <img
+              src="https://avatars.githubusercontent.com/u/272515403?v=4"
+              alt="Jackson Oliveira"
+            />
           </div>
           <h2>Jackson Oliveira</h2>
           <p>Desenvolvedor de Software</p>
         </div>
 
         <nav>
-          <a href="#sobre" onClick={(e) => { e.preventDefault(); scrollToSection('#sobre') }}>Sobre</a>
-          <a href="#experiencia" onClick={(e) => { e.preventDefault(); scrollToSection('#experiencia') }}>Experiência</a>
-          <a href="#skills" onClick={(e) => { e.preventDefault(); scrollToSection('#skills') }}>Skills</a>
-          <a href="#projetos" onClick={(e) => { e.preventDefault(); scrollToSection('#projetos') }}>Projetos</a>
-          <a href="#contato" onClick={(e) => { e.preventDefault(); scrollToSection('#contato') }}>Contato</a>
+          <a href="#sobre" onClick={(e) => { e.preventDefault(); scrollToSection('sobre') }}>Sobre</a>
+          <a href="#experiencia" onClick={(e) => { e.preventDefault(); scrollToSection('experiencia') }}>Experiência</a>
+          <a href="#skills" onClick={(e) => { e.preventDefault(); scrollToSection('skills') }}>Skills</a>
+          <a href="#projetos" onClick={(e) => { e.preventDefault(); scrollToSection('projetos') }}>Projetos</a>
+          <a href="#contato" onClick={(e) => { e.preventDefault(); scrollToSection('contato') }}>Contato</a>
         </nav>
 
         <div className="social">
-          <a href="https://linkedin.com/in/jackson-oliveira" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-          <a href="https://github.com/sooJack" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-          <a href="mailto:pegaojack16@gmail.com"><SiGmail /></a>
+          <a href="https://linkedin.com/in/jackson-oliveira" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+          </a>
+          <a href="https://github.com/sooJack" target="_blank" rel="noopener noreferrer">
+            <FaGithub />
+          </a>
+          <a href="mailto:pegaojack16@gmail.com">
+            <SiGmail />
+          </a>
         </div>
       </aside>
+
+      {/* CONTENT */}
       <main className="content">
 
-        {/* sobre */}
         <section id="sobre" className="section">
           <h1>Sobre</h1>
           <p>
             Sou desenvolvedor de software com perfil proativo e adaptável,
             com facilidade em aprender rapidamente novas tecnologias.
-            Busco constantemente evoluir profissionalmente e contribuir para o crescimento da empresa, propondo melhorias e soluções eficientes.
-            Tenho foco em resultados, trabalho em equipe e no desenvolvimento contínuo, sempre alinhado às necessidades do negócio.
           </p>
-
         </section>
-        {/* experience */}
+
         <section id="experiencia" className="section">
           <h1>Experiência</h1>
+
           <div className="timeline">
             <div className="item">
               <div className="dot"></div>
@@ -82,57 +108,78 @@ function App() {
               </div>
             </div>
           </div>
-
         </section>
-        {/* skills */}
+
         <section id="skills" className="section">
           <h1>Skills</h1>
+
           <div className="skills-grid">
             <div className="skill">
               <span>JavaScript</span>
               <div className="bar"><div style={{ width: '90%' }}></div></div>
             </div>
+
             <div className="skill">
               <span>Python</span>
               <div className="bar"><div style={{ width: '85%' }}></div></div>
             </div>
+
             <div className="skill">
               <span>CSS</span>
               <div className="bar"><div style={{ width: '80%' }}></div></div>
             </div>
           </div>
-
         </section>
-        {/* projects */}
+
         <section id="projetos" className="section">
           <h1>Projetos</h1>
+
           <div className="projects">
             <div className="project">
               <h3>BlackOut</h3>
-              <p>
-                Sistema moderno e eficiente programado para um site de jogos, com foco em esclarecer as necessidades dos usuários,
-                as funcionalidades e a experiência de varios usuários, para criar um sistema de classificação de jogos que seja fácil de usar.
-              </p>
+              <p>Sistema de jogos com foco em experiência do usuário.</p>
             </div>
+
             <div className="project">
               <h3>Projeto RPG</h3>
-              <p>
-                Criação de sites diversos para RPGs, tudo responsivo, aderindo a modernidade e funcionalidades simples, adições constantes e novas.
-              </p>
+              <p>Sites responsivos para RPGs com funcionalidades simples.</p>
             </div>
           </div>
-
         </section>
-        {/* contato */}
+
         <section id="contato" className="section">
           <h1>Contato</h1>
-          <form id="formContato" onSubmit={handleSubmit}>
-            <input type="text" name="nome" placeholder="Nome" value={formData.nome} onChange={handleInputChange} required />
-            <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleInputChange} required />
-            <textarea name="mensagem" placeholder="Mensagem" value={formData.mensagem} onChange={handleInputChange}></textarea>
+
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="nome"
+              placeholder="Nome"
+              value={formData.nome}
+              onChange={handleInputChange}
+              required
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+            />
+
+            <textarea
+              name="mensagem"
+              placeholder="Mensagem"
+              value={formData.mensagem}
+              onChange={handleInputChange}
+            />
+
             <button type="submit">Enviar</button>
           </form>
         </section>
+
       </main>
     </div>
   )

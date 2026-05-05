@@ -27,7 +27,7 @@ function App() {
       <aside className="sidebar">
         <div className="profile">
           <div className="avatar">
-            <img src="/avatar.jpg" alt="Jackson Oliveira" />
+            <img src="https://avatars.githubusercontent.com/u/272515403?v=4" alt="Jackson Oliveira" />
           </div>
           <h2>Jackson Oliveira</h2>
           <p>Desenvolvedor de Software</p>

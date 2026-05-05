@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "dev": "...",
+    "start": "...",
+    "build": "..."
+  },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.4",
     "framer-motion": "^12.38.0",

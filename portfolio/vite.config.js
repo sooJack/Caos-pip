@@ -4,8 +4,11 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Caos-pip/',
   plugins: [react()],
+
+  // ⚠️ importante: precisa bater exatamente com o nome do repo
+  base: process.env.NODE_ENV === 'production' ? '/Caos-pip/' : '/',
+
   resolve: {
     alias: {
       "@": fileURLToPath(new URL('./src', import.meta.url))

@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
 
   // ⚠️ importante: precisa bater exatamente com o nome do repo
-  base: process.env.NODE_ENV === 'production' ? '/Caos-pip/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/caos-pip/' : '/',
 
   resolve: {
     alias: {

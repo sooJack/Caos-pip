@@ -1,0 +1,49 @@
+{
+  "hash": "2eb9308b",
+  "configHash": "fe3c7dd6",
+  "lockfileHash": "d72d474b",
+  "browserHash": "84b9ce4f",
+  "optimized": {
+    "react": {
+      "src": "../../caos-pip/node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "f5438fdd",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "8876ee29",
+      "needsInterop": true
+    },
+    "react-icons/fa6": {
+      "src": "../../node_modules/react-icons/fa6/index.mjs",
+      "file": "react-icons_fa6.js",
+      "fileHash": "52e8e28e",
+      "needsInterop": false
+    },
+    "react-icons/fa": {
+      "src": "../../node_modules/react-icons/fa/index.mjs",
+      "file": "react-icons_fa.js",
+      "fileHash": "94d352a2",
+      "needsInterop": false
+    },
+    "react-icons/si": {
+      "src": "../../node_modules/react-icons/si/index.mjs",
+      "file": "react-icons_si.js",
+      "fileHash": "324ee745",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-RZDOXOUB": {
+      "file": "chunk-RZDOXOUB.js"
+    },
+    "chunk-HI23KIIB": {
+      "file": "chunk-HI23KIIB.js"
+    },
+    "chunk-5WRI5ZAA": {
+      "file": "chunk-5WRI5ZAA.js"
+    }
+  }
+}

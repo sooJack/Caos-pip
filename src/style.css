@@ -163,7 +163,7 @@ button {
 
 .timeline {
   display: grid;
-  gap: 18px;
+  gap: 14px;
 }
 
 .item {
@@ -172,12 +172,17 @@ button {
   align-items: flex-start;
 }
 
+.info {
+  display: grid;
+  gap: 8px;
+}
+
 .dot {
   width: 14px;
   height: 14px;
   border-radius: 50%;
   background: var(--accent);
-  margin-top: 10px;
+  margin-top: 4px;
 }
 
 .info h3 {
@@ -187,7 +192,7 @@ button {
 
 .info span {
   display: inline-block;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   color: var(--accent);
   font-size: 14px;
 }

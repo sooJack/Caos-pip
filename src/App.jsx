@@ -90,7 +90,7 @@ function App() {
             com facilidade em aprender rapidamente novas tecnologias.
           </p>
         </section>
-
+        
         <section id="experiencia" className="section">
           <h1>Experiência</h1>
 

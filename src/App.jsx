@@ -90,7 +90,7 @@ function App() {
             com facilidade em aprender rapidamente novas tecnologias.
           </p>
         </section>
-
+        
         <section id="experiencia" className="section">
           <h1>Experiência</h1>
 
@@ -98,18 +98,18 @@ function App() {
             <div className="item">
               <div className="dot"></div>
               <div className="info">
-                <h3>Sydney Studios</h3>
-                <span>2022 - Atual</span>
-                <p>Arquitetura de sistemas e desenvolvimento full stack.</p>
+                <h3>AEC</h3>
+                <span>- 2025 -</span>
+                <p>Atendimento ao cliente elaborado e vendas de produtos.</p>
               </div>
             </div>
 
             <div className="item">
               <div className="dot"></div>
               <div className="info">
-                <h3>Google</h3>
-                <span>2020 - 2022</span>
-                <p>Frontend e experiência do usuário.</p>
+                <h3>Freelancer</h3>
+                <span>2026 - Atual</span>
+                <p>Frontend e Backend. experiências dos usuários.</p>
               </div>
             </div>
           </div>

@@ -108,7 +108,7 @@ function App() {
               <div className="dot"></div>
               <div className="info">
                 <h3>Freelancer</h3>
-                <span>2026 - Atual</span>
+                <span>-2026 - Atual</span>
                 <p>Frontend e Backend. experiências dos usuários.</p>
               </div>
             </div>

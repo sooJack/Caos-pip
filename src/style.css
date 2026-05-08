@@ -153,6 +153,7 @@ button {
 .section h1 {
   margin: 0 0 16px;
   font-size: 32px;
+  text-align: center;
 }
 
 .section p {
@@ -162,37 +163,41 @@ button {
 }
 
 .timeline {
-  display: grid;
-  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .item {
-  display: flex;
-  gap: 18px;
+  position: relative;
   align-items: flex-start;
 }
 
 .info {
   display: grid;
-  gap: 8px;
+  gap: 12px;
+  text-align: center;
+  margin-left: 32px;
 }
 
 .dot {
+  position: absolute;
+  left: -32px;
+  top: 4px;
   width: 14px;
   height: 14px;
   border-radius: 50%;
   background: var(--accent);
-  margin-top: 4px;
 }
 
 .info h3 {
-  margin: 0 0 6px;
+  margin: 0;
   font-size: 20px;
 }
 
 .info span {
   display: inline-block;
-  margin-bottom: 8px;
+  margin: 0;
   color: var(--accent);
   font-size: 14px;
 }
